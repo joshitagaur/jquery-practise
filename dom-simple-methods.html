@@ -1,0 +1,39 @@
+<!-- using filter function -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+	<script type="text/javascript" src="jquery-2.2.4.js"></script>
+	<style type="text/css">
+		.br{
+			color: blue;
+			font: 20px bold Tahoma;
+		}
+	</style>
+</head>
+<body>
+	<ul class="list">
+		<li>One</li>
+		<li id="special">Two</li>
+		<li>Three</li>
+		<li>
+			<ul class="sublist">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</li>	
+	</ul>
+	<script>
+		$(function(){
+			
+			$('li').on('click', function(){
+				$(this).filter('#special').addClass('br');
+				if($(this).parent().is('.sublist'))
+					$(this).hide();
+			})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!-- reducing the repetetive code in jQuery-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<script type="text/javascript" src="jquery-2.2.4.js"></script>
+	<style>
+		.pan{
+			display: inline-block;
+			color: red;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			var newContent = 'This is my new awesome comment';
+			$('.panel-class').on('click', function(){
+				var panelid = $(this).attr('data-panelid');
+				$('#'+panelid).toggle();
+				$('#'+panelid+' .panel-body').html(newContent);
+			})
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<h1>Simple jQuery</h1>
+		<button class="panel-class" data-panelid="panel1">#btn1</button>
+		<button class="panel-class" data-panelid="panel2">#btn2</button>
+		<button class="panel-class" data-panelid="panel3">#btn3</button>
+		<button class="panel-class" data-panelid="panel4">#btn4</button>
+	</div>
+	<div id ="panel1" class="panel panel-default pan" >
+  		<div class="panel-heading">#panel1</div>
+  		<div class="panel-body">content</div>
+	</div>
+	<div id="panel2" class="panel panel-default pan">
+  		<div class="panel-heading">#panel2</div>
+  		<div class="panel-body">content</div>
+	</div>
+	<div id ="panel3" class="panel panel-default pan">
+  		<div class="panel-heading">#panel3</div>
+  		<div class="panel-body">content</div>
+	</div>
+	<div id="panel4" class="panel panel-default pan">
+  		<div class="panel-heading">#panel4</div>
+  		<div class="panel-body">content</div>
+	</div>
+</body>
+</html>

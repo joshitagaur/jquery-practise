@@ -1,0 +1,56 @@
+<!--using buttons to toggle panels in jQuery-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<script type="text/javascript" src="jquery-2.2.4.js"></script>
+	<style>
+		.pan{
+			display: inline-block;
+			color: red;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$('#btn1').on('click', function(){
+				$('#panel1').toggle();
+			})
+			$('#btn2').on('click', function(){
+				$('#panel2').toggle();
+			})
+			$('#btn3').on('click', function(){
+				$('#panel3').toggle();
+			})
+			$('#btn4').on('click', function(){
+				$('#panel4').toggle();
+			})
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<h1>Simple jQuery</h1>
+		<button id="btn1">#btn1</button>
+		<button id="btn2">#btn2</button>
+		<button id="btn3">#btn3</button>
+		<button id="btn4">#btn4</button>
+	</div>
+	<div id ="panel1" class="panel panel-default pan" >
+  		<div class="panel-heading">#panel1</div>
+  		<div class="panel-body">content</div>
+	</div>
+	<div id="panel2" class="panel panel-default pan">
+  		<div class="panel-heading">#panel2</div>
+  		<div class="panel-body">content</div>
+	</div>
+	<div id ="panel3" class="panel panel-default pan">
+  		<div class="panel-heading">#panel3</div>
+  		<div class="panel-body">content</div>
+	</div>
+	<div id="panel4" class="panel panel-default pan">
+  		<div class="panel-heading">#panel4</div>
+  		<div class="panel-body">content</div>
+	</div>
+</body>
+</html>

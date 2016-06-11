@@ -1,0 +1,50 @@
+<!--basic functions in jQuery-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Excersice 1</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<script type="text/javascript" src="jquery-2.2.4.js"></script>
+	<style>
+		.pan{
+			display: inline-block;
+			color: red;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$('#btn1').hide(300).show(500);
+			$('#btn2').slideUp(200).delay(100).slideDown(500);
+			$('#btn3').fadeOut(300).fadeIn(800);
+			$('#btn4').toggle(300).toggle(300);
+			$('#panel2').css({color: 'blue'});
+			$('#panel1').html('my panel');
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<h1>Simple jQuery</h1>
+		<button id="btn1">#btn1</button>
+		<button id="btn2">#btn2</button>
+		<button id="btn3">#btn3</button>
+		<button id="btn4">#btn4</button>
+	</div>
+	<div id ="panel1" class="panel panel-default pan" >
+  		<div class="panel-heading">#panel1</div>
+  		<div class="panel-body">content</div>
+	</div>
+	<div id="panel2" class="panel panel-default pan">
+  		<div class="panel-heading">#panel2</div>
+  		<div class="panel-body">content</div>
+	</div>
+	<div class="panel panel-default pan">
+  		<div class="panel-heading">#panel3</div>
+  		<div class="panel-body">content</div>
+	</div>
+	<div class="panel panel-default pan">
+  		<div class="panel-heading">#panel4</div>
+  		<div class="panel-body">content</div>
+	</div>
+</body>
+</html>
